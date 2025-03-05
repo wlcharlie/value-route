@@ -3,7 +3,7 @@ import 'package:flame/flame.dart';
 import 'package:value_route/my_game.dart';
 import 'package:value_route/room.dart';
 
-class HomeWorld extends World with HasGameReference<MyGame> {
+class HomeWorld extends Component with HasGameReference<MyGame> {
   final room = Room();
 
   static ComponentKey componentKey = ComponentKey.named("home_world");

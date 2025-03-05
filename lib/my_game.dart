@@ -11,12 +11,12 @@ class MyGame extends FlameGame with PanDetector {
 
   @override
   void onLoad() {
-    router = RouterComponent(
+    add(router = RouterComponent(
       routes: {
-        'home': WorldRoute(HomeWorld.new),
+        'home': Route(HomeWorld.new),
       },
       initialRoute: 'home',
-    );
+    ));
     add(router);
 
     camera = CameraComponent.withFixedResolution(
