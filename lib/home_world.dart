@@ -1,3 +1,4 @@
+import 'package:flame/camera.dart';
 import 'package:flame/components.dart';
 import 'package:flame/flame.dart';
 import 'package:value_route/my_game.dart';
@@ -18,12 +19,16 @@ class HomeWorld extends World with HasGameReference<MyGame> {
       "paper_ball.png",
     ]);
 
+    // this will make the value route hide behind the sprite
     game.camera = CameraComponent.withFixedResolution(
       width: 393,
       height: 852,
-    );
+    )..viewfinder.anchor = Anchor.topLeft;
 
-    game.camera.viewfinder.anchor = Anchor.topLeft;
+    // game.camera.viewfinder.anchor = Anchor.topLeft;
+    // game.camera.viewport = FixedResolutionViewport(
+    //   resolution: Vector2(393, 852),
+    // );
 
     add(room);
   }
