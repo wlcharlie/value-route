@@ -18,7 +18,13 @@ class HomeWorld extends World with HasGameReference<MyGame> {
       "paper_ball.png",
     ]);
 
+    game.camera = CameraComponent.withFixedResolution(
+      width: 393,
+      height: 852,
+    );
+
     game.camera.viewfinder.anchor = Anchor.topLeft;
+
     add(room);
   }
 }

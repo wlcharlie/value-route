@@ -18,10 +18,5 @@ class MyGame extends FlameGame with PanDetector {
       initialRoute: 'home',
     );
     add(router);
-
-    camera = CameraComponent.withFixedResolution(
-      width: 393,
-      height: 852,
-    );
   }
 }
